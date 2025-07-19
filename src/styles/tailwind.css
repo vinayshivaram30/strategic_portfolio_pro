@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #f8f9fa; /* gray-50 */
+    --color-foreground: #2c3e50; /* slate-700 */
+    --color-border: #e9ecef; /* gray-200 */
+    --color-input: #ffffff; /* white */
+    --color-ring: #00a8a8; /* teal-500 */
+    
+    /* Card Colors */
+    --color-card: #ffffff; /* white */
+    --color-card-foreground: #2c3e50; /* slate-700 */
+    --color-popover: #ffffff; /* white */
+    --color-popover-foreground: #2c3e50; /* slate-700 */
+    
+    /* Muted Colors */
+    --color-muted: #f8f9fa; /* gray-50 */
+    --color-muted-foreground: #6c757d; /* gray-500 */
+    
+    /* Primary Colors */
+    --color-primary: #1a2332; /* slate-800 */
+    --color-primary-foreground: #ffffff; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #00a8a8; /* teal-500 */
+    --color-secondary-foreground: #ffffff; /* white */
+    
+    /* Destructive Colors */
+    --color-destructive: #dc3545; /* red-600 */
+    --color-destructive-foreground: #ffffff; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #0066cc; /* blue-600 */
+    --color-accent-foreground: #ffffff; /* white */
+    
+    /* Success Colors */
+    --color-success: #28a745; /* green-600 */
+    --color-success-foreground: #ffffff; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #ffc107; /* yellow-500 */
+    --color-warning-foreground: #000000; /* black */
+    
+    /* Error Colors */
+    --color-error: #dc3545; /* red-600 */
+    --color-error-foreground: #ffffff; /* white */
+    
+    /* Brand Specific Colors */
+    --color-strategic-navy: #1a2332; /* slate-800 */
+    --color-innovation-teal: #00a8a8; /* teal-500 */
+    --color-conversion-orange: #ff6b35; /* orange-500 */
+    --color-trust-green: #28a745; /* green-600 */
+    --color-executive-gray: #6c757d; /* gray-500 */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .executive-shadow {
+    box-shadow: 0 2px 8px rgba(26, 35, 50, 0.08);
+  }
+  
+  .executive-shadow-lg {
+    box-shadow: 0 8px 24px rgba(26, 35, 50, 0.12);
+  }
+  
+  .strategic-gradient {
+    background: linear-gradient(135deg, rgba(26, 35, 50, 0.8) 0%, rgba(0, 168, 168, 0.1) 100%);
+  }
+  
+  .dashboard-card {
+    @apply bg-card text-card-foreground rounded-lg executive-shadow border border-border;
+  }
+  
+  .metrics-highlight {
+    @apply text-secondary font-bold;
+  }
+  
+  .executive-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .strategic-hover:hover {
+    @apply transform -translate-y-2;
+    box-shadow: 0 20px 40px rgba(26, 35, 50, 0.15);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+}
